@@ -4,15 +4,16 @@ function carregar(){
     var img = document.getElementById('imagem')
     var data = new Date()
     var hora = data.getHours()
-    msg.innerHTML = `Agora são ${hora} horas.`
+    var minutos = data.getMinutes()
+    msg.innerHTML = `Agora são ${hora} horas e ${minutos} minutos.`
     if(hora >= 0 && hora < 12){
         //Bom dia 
-        img.src = 'fotomnha.png'
+        img.src = 'fotomanha.png'
         document.body.style.backgroundColor = '#a6abaa'
     } else if(hora >= 12 && hora < 18){
 
      //Bom dia 
-     img.src = 'fototarde.png' 
+     img.src = 'fototarde.png'
      document.body.style.backgroundColor = '#bb5b25'
     }else {
 
