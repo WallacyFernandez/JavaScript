@@ -14,15 +14,22 @@ function Verificar(){
         var idade = ano - Number(fano.value)
         var genero = ''
         if (fsex[0].checked){
+
             genero = 'homem'
+
             if(idade >= 0 && idade < 10){
 
-                
+                img.setAttribute('src', 'homemcriança.png')
             }
         }else if (fsex[1].checked){
             genero = 'mulher'
+            if(idade >= 0 && idade < 10){
+
+                img.setAttribute('src', 'mulhercriança.png')
+            }
         }
         res.style.textAlign = 'center'
         res.innerHTML=`Detectamos ${genero} com ${idade} anos.`
+        res.appendChild(img)
     }
 }
